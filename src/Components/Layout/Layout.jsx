@@ -1,16 +1,17 @@
 import React from "react";
-import Navbar from "../Topnav/Navbar";
+import Navbar from "../Navbar/Navbar";
 import Router from "../../Routes/Router";
+import Footer from "../Footer/Footer";
 
 const Layout = () => {
   return (
-    <>
+    <div className="container">
       <Navbar />
       <div className="main">
-        hgfr
-        {/* <Router /> */}
+        <Router />
       </div>
-    </>
+      <Footer />
+    </div>
   );
 };
 
