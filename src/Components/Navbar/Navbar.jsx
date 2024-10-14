@@ -112,34 +112,34 @@ const Navbar = () => {
                         Options
                         <img className="arrows" src={right} alt="" />
                         <div class="dropdown-content3">
-                          <NavLink className={"fixed__link"}>
+                          <NavLink to={"/services"} className={"fixed__link"}>
                             Advertising inside the salon
                           </NavLink>
                           <hr />
 
-                          <NavLink className={"fixed__link"}>
+                          <NavLink to={"/services"} className={"fixed__link"}>
                             Advertising outside the bus
                           </NavLink>
                           <hr />
 
-                          <NavLink className={"fixed__link"}>
+                          <NavLink to={"/services"} className={"fixed__link"}>
                             Ochiq ma’lumotlar
                           </NavLink>
                         </div>
                       </p>
                       <hr />
 
-                      <NavLink className={"fixed__link"}>
+                      <NavLink to={"/services"} className={"fixed__link"}>
                         In the tunnels
                       </NavLink>
                       <hr />
 
-                      <NavLink className={"fixed__link"}>
+                      <NavLink to={"/services"} className={"fixed__link"}>
                         Outside the subway
                       </NavLink>
                       <hr />
 
-                      <NavLink className={"fixed__link"}>
+                      <NavLink to={"/services"} className={"fixed__link"}>
                         Inside the subway
                       </NavLink>
                       <hr />

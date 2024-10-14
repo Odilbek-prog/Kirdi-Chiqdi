@@ -36,13 +36,13 @@ const What = () => {
                 of the left sides of the buses "MAN" and...
               </p>
               <button class="video__btn btn-13">
-                <NavLink
+                <a
                   className="cta"
                   style={{ textDecoration: "none", color: "#fff" }}
-                  to={"/services/1"}
+                  to={"/#contact"}
                 >
-                  More
-                </NavLink>
+                  Contact
+                </a>
               </button>
             </div>
           </SwiperSlide>
@@ -56,13 +56,13 @@ const What = () => {
                 ullam ratione...
               </p>
               <button class="video__btn btn-13">
-                <NavLink
+                <a
                   className="cta"
                   style={{ textDecoration: "none", color: "#fff" }}
-                  to={"/services/2"}
+                  to={"/#contact"}
                 >
-                  More
-                </NavLink>
+                  Contact
+                </a>
               </button>
             </div>
           </SwiperSlide>
@@ -75,13 +75,13 @@ const What = () => {
                 the widest range of services in the field of outdoor...
               </p>
               <button class="video__btn btn-13">
-                <NavLink
+                <a
                   className="cta"
                   style={{ textDecoration: "none", color: "#fff" }}
-                  to={"/services/3"}
+                  to={"/#contact"}
                 >
-                  More
-                </NavLink>
+                  Contact
+                </a>
               </button>
             </div>
           </SwiperSlide>
@@ -94,13 +94,13 @@ const What = () => {
                 IPS Gaming Monitor, 300 cd/m², 60Hz...
               </p>
               <button class="video__btn btn-13">
-                <NavLink
+                <a
                   className="cta"
                   style={{ textDecoration: "none", color: "#fff" }}
-                  to={"/services/4"}
+                  to={"/#contact"}
                 >
-                  More
-                </NavLink>
+                  Contact
+                </a>
               </button>
             </div>
           </SwiperSlide>
@@ -113,13 +113,13 @@ const What = () => {
                 частота...
               </p>
               <button class="video__btn btn-13">
-                <NavLink
+                <a
                   className="cta"
                   style={{ textDecoration: "none", color: "#fff" }}
-                  to={"/services/5"}
+                  to={"/#contact"}
                 >
-                  More
-                </NavLink>
+                  Contact
+                </a>
               </button>
             </div>
           </SwiperSlide>
@@ -133,13 +133,13 @@ const What = () => {
                 planetary...
               </p>
               <button class="video__btn btn-13">
-                <NavLink
+                <a
                   className="cta"
                   style={{ textDecoration: "none", color: "#fff" }}
-                  to={"/services/6"}
+                  to={"/#contact"}
                 >
-                  More
-                </NavLink>
+                  Contact
+                </a>
               </button>
             </div>
           </SwiperSlide>
@@ -152,13 +152,13 @@ const What = () => {
                 military coup shortly after his re-election. A business jet ...
               </p>
               <button class="video__btn btn-13">
-                <NavLink
+                <a
                   className="cta"
                   style={{ textDecoration: "none", color: "#fff" }}
-                  to={"/services/6"}
+                  to={"/#contact"}
                 >
-                  More
-                </NavLink>
+                  Contact
+                </a>
               </button>
             </div>
           </SwiperSlide>
