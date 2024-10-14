@@ -5,20 +5,24 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import { useTranslation } from "react-i18next"; // useTranslation qo'shildi
 
 const Video = () => {
+  const { t } = useTranslation(); // useTranslation qo'shildi
+
   return (
     <div className="video">
       <div className="video__wrapper">
         <div className="video__desc">
-          <h1 className="video__title">Video</h1>
-          <button class="video__btn btn-13">
+          <h1 className="video__title">{t("video")}</h1>{" "}
+          {/* Tarjima qo'shildi */}
+          <button className="video__btn btn-13">
             <NavLink
-              class="cta"
+              className="cta"
               style={{ textDecoration: "none", color: "#fff" }}
-              to={"/allvideos"}
+              to="/allvideos"
             >
-              All videos
+              {t("allVideos")} {/* Tarjima qo'shildi */}
             </NavLink>
           </button>
         </div>
@@ -35,47 +39,47 @@ const Video = () => {
         >
           <SwiperSlide className="video__banner">
             <a className="video__pause">
-              <i class="fas fa-play"></i>
+              <i className="fas fa-play"></i>
             </a>
           </SwiperSlide>
           <SwiperSlide className="video__banner">
             <a className="video__pause">
-              <i class="fas fa-play"></i>
+              <i className="fas fa-play"></i>
             </a>
           </SwiperSlide>
           <SwiperSlide className="video__banner">
             <a className="video__pause">
-              <i class="fas fa-play"></i>
+              <i className="fas fa-play"></i>
             </a>
           </SwiperSlide>
           <SwiperSlide className="video__banner">
             <a className="video__pause">
-              <i class="fas fa-play"></i>
+              <i className="fas fa-play"></i>
             </a>
           </SwiperSlide>
           <SwiperSlide className="video__banner">
             <a className="video__pause">
-              <i class="fas fa-play"></i>
+              <i className="fas fa-play"></i>
             </a>
           </SwiperSlide>
           <SwiperSlide className="video__banner">
             <a className="video__pause">
-              <i class="fas fa-play"></i>
+              <i className="fas fa-play"></i>
             </a>
           </SwiperSlide>
           <SwiperSlide className="video__banner">
             <a className="video__pause">
-              <i class="fas fa-play"></i>
+              <i className="fas fa-play"></i>
             </a>
           </SwiperSlide>
           <SwiperSlide className="video__banner">
             <a className="video__pause">
-              <i class="fas fa-play"></i>
+              <i className="fas fa-play"></i>
             </a>
           </SwiperSlide>
           <SwiperSlide className="video__banner">
             <a className="video__pause">
-              <i class="fas fa-play"></i>
+              <i className="fas fa-play"></i>
             </a>
           </SwiperSlide>
         </Swiper>

@@ -1,28 +1,28 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import bus from "../../public/bus.jpeg";
-import cat from "../../public/cat.png";
-import uchd from "../../public/3d.jpeg";
-import nike from "../../public/nike.jpeg";
-import dia from "../../public/dia.jpeg";
-import isrof from "../../public/isrof.jpeg";
-import banner3 from "../../public/banner2.png";
+import bus from "../../public/img/bus.jpeg";
+import cat from "../../public/img/cat.png";
+import uchd from "../../public/img/3d.jpeg";
+import nike from "../../public/img/nike.jpeg";
+import dia from "../../public/img/dia.jpeg";
+import isrof from "../../public/img/isrof.jpeg";
+import banner3 from "../../public/img/banner2.png";
+import { useTranslation } from "react-i18next";
 
 const Services = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="services">
       <div className="services__wrapper">
-        <h1 className="services__title">What do we do?</h1>
+        <h1 className="services__title">{t("servicesTitle")}</h1>
         <div className="services__cards">
           <div className="what__card">
             <img src={bus} alt="" />
             <div className="what__desc">
-              <h2 className="what__cardtitle">Avtobusda tashqi tomon</h2>
-              <p className="what__text">
-                We will place your banner on the outside of City Buses Branding
-                of the left sides of the buses "MAN" and...
-              </p>
-              <button class="video__btn btn-13">
+              <h2 className="what__cardtitle">{t("busAdvertising")}</h2>
+              <p className="what__text">{t("busDescription")}</p>
+              <button className="video__btn btn-13">
                 <NavLink
                   className="cta"
                   style={{ textDecoration: "none", color: "#fff" }}
@@ -36,13 +36,9 @@ const Services = () => {
           <div className="what__card">
             <img src={cat} alt="" />
             <div className="what__desc">
-              <h2 className="what__cardtitle">Advertising on LED screens</h2>
-              <p className="what__text">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Nesciunt nisi placeat rerum quod atque fuga odit magni modi
-                ullam ratione...
-              </p>
-              <button class="video__btn btn-13">
+              <h2 className="what__cardtitle">{t("ledAdvertising")}</h2>
+              <p className="what__text">{t("ledDescription")}</p>
+              <button className="video__btn btn-13">
                 <NavLink
                   className="cta"
                   style={{ textDecoration: "none", color: "#fff" }}
@@ -56,12 +52,9 @@ const Services = () => {
           <div className="what__card">
             <img src={uchd} alt="" />
             <div className="what__desc">
-              <h2 className="what__cardtitle">Advertising service</h2>
-              <p className="what__text">
-                The company is a team of professionals specializing in providing
-                the widest range of services in the field of outdoor...
-              </p>
-              <button class="video__btn btn-13">
+              <h2 className="what__cardtitle">{t("advertisingService")}</h2>
+              <p className="what__text">{t("serviceDescription")}</p>
+              <button className="video__btn btn-13">
                 <NavLink
                   className="cta"
                   style={{ textDecoration: "none", color: "#fff" }}
@@ -75,12 +68,9 @@ const Services = () => {
           <div className="what__card">
             <img src={nike} alt="" />
             <div className="what__desc">
-              <h2 className="what__cardtitle">HD screen</h2>
-              <p className="what__text">
-                Z-Edge 4K Monitor, U28I4K 28inch IPS Monitor Ultra HD 3840x2160
-                IPS Gaming Monitor, 300 cd/m², 60Hz...
-              </p>
-              <button class="video__btn btn-13">
+              <h2 className="what__cardtitle">{t("hdScreen")}</h2>
+              <p className="what__text">{t("hdDescription")}</p>
+              <button className="video__btn btn-13">
                 <NavLink
                   className="cta"
                   style={{ textDecoration: "none", color: "#fff" }}
@@ -94,12 +84,9 @@ const Services = () => {
           <div className="what__card">
             <img src={dia} alt="" />
             <div className="what__desc">
-              <h2 className="what__cardtitle">4K monitor</h2>
-              <p className="what__text">
-                Z-Edge U27P4K 27-дюймовый игровой монитор Ultra HD 4K,
-                частота...
-              </p>
-              <button class="video__btn btn-13">
+              <h2 className="what__cardtitle">{t("fourKMonitor")}</h2>
+              <p className="what__text">{t("fourKDescription")}</p>
+              <button className="video__btn btn-13">
                 <NavLink
                   className="cta"
                   style={{ textDecoration: "none", color: "#fff" }}
@@ -113,13 +100,9 @@ const Services = () => {
           <div className="what__card">
             <img src={isrof} alt="" />
             <div className="what__desc">
-              <h2 className="what__cardtitle">Hello world</h2>
-              <p className="what__text">
-                In fiction, the planet Mars, fourth from the Sun, has appeared
-                as a setting in at least 5,000 works, portrayed differently as
-                planetary...
-              </p>
-              <button class="video__btn btn-13">
+              <h2 className="what__cardtitle">{t("helloWorld")}</h2>
+              <p className="what__text">{t("helloWorldDescription")}</p>
+              <button className="video__btn btn-13">
                 <NavLink
                   className="cta"
                   style={{ textDecoration: "none", color: "#fff" }}
@@ -133,12 +116,9 @@ const Services = () => {
           <div className="what__card">
             <img src={banner3} alt="" />
             <div className="what__desc">
-              <h2 className="what__cardtitle">On the side of the road</h2>
-              <p className="what__text">
-                In Gabon, President Ali Bongo Ondimba (pictured) is deposed by a
-                military coup shortly after his re-election. A business jet ...
-              </p>
-              <button class="video__btn btn-13">
+              <h2 className="what__cardtitle">{t("roadSide")}</h2>
+              <p className="what__text">{t("roadSideDescription")}</p>
+              <button className="video__btn btn-13">
                 <NavLink
                   className="cta"
                   style={{ textDecoration: "none", color: "#fff" }}

@@ -1,31 +1,32 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import "./Trust.scss";
 import { NavLink } from "react-router-dom";
-import click from "../../../../public/click.jpeg";
-import payme from "../../../../public/payme.png";
-import fanta from "../../../../public/fanta.png";
-import pepsi from "../../../../public/pepsi.png";
-import cola from "../../../../public/cola.png";
-import turan1 from "../../../../public/turan1.png";
-import turan2 from "../../../../public/turan2.png";
-import turan4 from "../../../../public/turan4.png";
-import uzum from "../../../../public/uzum.jpeg";
-import turan3 from "../../../../public/turan3.jpeg";
-import joyda from "../../../../public/joyda.jpeg";
+import click from "../../../../public/img/click.jpeg";
+import payme from "../../../../public/img/payme.png";
+import fanta from "../../../../public/img/fanta.png";
+import pepsi from "../../../../public/img/pepsi.png";
+import cola from "../../../../public/img/cola.png";
+import turan1 from "../../../../public/img/turan1.png";
+import turan2 from "../../../../public/img/turan2.png";
+import turan4 from "../../../../public/img/turan4.png";
+import uzum from "../../../../public/img/uzum.jpeg";
+import turan3 from "../../../../public/img/turan3.jpeg";
+import joyda from "../../../../public/img/joyda.jpeg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 
 const Trust = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="trust">
       <div className="trust__wrapper">
         <div className="team__top">
           <div className="team__desc">
-            <h2 className="team__title">Trusted by</h2>
-            <p className="team__text">
-              To be continued... There is a place for your logo too
-            </p>
+            <h2 className="team__title">{t("trust_title")}</h2>
+            <p className="team__text">{t("trust_text")}</p>
           </div>
           <button className="team__btn btn-13">
             <a
@@ -33,7 +34,7 @@ const Trust = () => {
               style={{ textDecoration: "none", color: "#fff" }}
               to={"/#contact"}
             >
-              Become a client
+              {t("become_client")}
             </a>
           </button>
         </div>
@@ -47,6 +48,7 @@ const Trust = () => {
           }}
           className="video__swiper"
         >
+          {/* Tasvir va linklarni o'zgartirishsiz qoldirildi */}
           <SwiperSlide className="trust__banner">
             <NavLink className={"trust__link"} to={"https://click.uz"}>
               <img src={click} alt="" className="trust__img" />

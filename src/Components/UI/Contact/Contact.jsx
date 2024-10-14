@@ -1,11 +1,13 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import "./Contact.scss";
-import Contactimg from "../../../../public/contactimg.png";
+import Contactimg from "../../../../public/img/contactimg.png";
 import axios from "axios";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
+  const { t } = useTranslation();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [number, setNumber] = useState("");
@@ -28,8 +30,8 @@ const Contact = () => {
     e.preventDefault();
     const data = [name, email, number, text];
 
-    const token = `7864075875:AAEqDfgVPUbuRQRSX2-VihtFRTZWKV7yb5Y`;
-    const chat_id = 6306759214;
+    const token = `YOUR_TELEGRAM_BOT_TOKEN`;
+    const chat_id = YOUR_CHAT_ID;
     const url = `https://api.telegram.org/bot${token}/sendMessage`;
 
     axios({
@@ -41,7 +43,7 @@ const Contact = () => {
       },
     })
       .then((data) => {
-        toast("Success");
+        toast(t("success_message"));
       })
       .catch((error) => {
         console.log(error);
@@ -51,13 +53,14 @@ const Contact = () => {
     setNumber("");
     setText("");
   };
+
   return (
     <div className="contact" id="contact">
       <div className="contact__wrapper">
         <div className="contact__left">
-          <h1 className="contact__title">Do you have any questions for us?</h1>
+          <h1 className="contact__title">{t("contact_title")}</h1>
           <form className="contact__form" onSubmit={handleSubmit}>
-            <label htmlFor="name">Name</label>
+            <label htmlFor="name">{t("name_label")}</label>
             <input
               type="text"
               name="name"
@@ -65,9 +68,9 @@ const Contact = () => {
               value={name}
               onChange={handleName}
               className="contact__inp"
-              placeholder="Enter your name"
+              placeholder={t("name_placeholder")}
             />
-            <label htmlFor="email">Email</label>
+            <label htmlFor="email">{t("email_label")}</label>
             <input
               type="email"
               name="email"
@@ -75,9 +78,9 @@ const Contact = () => {
               value={email}
               onChange={handleEmail}
               className="contact__inp"
-              placeholder="Enter your e-mail or Telegram"
+              placeholder={t("email_placeholder")}
             />
-            <label htmlFor="phone">Phone number</label>
+            <label htmlFor="phone">{t("phone_label")}</label>
             <input
               type="number"
               name="phone"
@@ -85,18 +88,18 @@ const Contact = () => {
               required
               value={number}
               onChange={handleNumber}
-              placeholder="+998"
+              placeholder={t("phone_placeholder")}
             />
-            <label htmlFor="message">Message</label>
+            <label htmlFor="message">{t("message_label")}</label>
             <textarea
               name="message"
               cols="40"
               rows="5"
               value={text}
               onChange={handleText}
-              placeholder="Your message"
+              placeholder={t("message_placeholder")}
             ></textarea>
-            <button className="contact__btn btn-13">Send</button>
+            <button className="contact__btn btn-13">{t("send_button")}</button>
           </form>
         </div>
         <img src={Contactimg} alt="" className="contact__img" />

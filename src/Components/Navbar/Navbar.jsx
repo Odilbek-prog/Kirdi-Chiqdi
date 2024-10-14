@@ -1,24 +1,35 @@
 import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import "./Navbar.scss";
-import logo from "../../../public/kirdichiqdi.png";
-import tg from "../../../public/telegram.png";
-import download from "../../../public/download.png";
-import chat from "../../../public/chat.png";
-import down from "../../../public/down.png";
-import right from "../../../public/right.png";
-import search from "../../../public/search.png";
-import clock from "../../../public/clock.png";
-import phone from "../../../public/phone.png";
-import moon from "../../../public/moon.png";
-import heart from "../../../public/heart.png";
+import logo from "../../../public/img/kirdichiqdi.png";
+import tg from "../../../public/img/telegram.png";
+import download from "../../../public/img/download.png";
+import chat from "../../../public/img/chat.png";
+import down from "../../../public/img/down.png";
+import right from "../../../public/img/right.png";
+import search from "../../../public/img/search.png";
+import clock from "../../../public/img/clock.png";
+import phone from "../../../public/img/phone.png";
+import heart from "../../../public/img/heart.png";
 import { NavLink } from "react-router-dom";
 import { ReactTyped } from "react-typed";
 import file from "../../assets/file.pdf";
-import Toggle from "react-toggle";
+import sun from "../../../public/img/Sun.svg";
+import moon from "../../../public/img/Moon.svg";
 
 const fixed = document.getElementsByClassName("fixed");
 
 const Navbar = () => {
+  const { t, i18n } = useTranslation();
+
+  // Sayt yuklanganda tilni localStorage'dan olish
+  useEffect(() => {
+    const savedLang = localStorage.getItem("language");
+    if (savedLang) {
+      i18n.changeLanguage(savedLang); // Sayt yuklanganda saqlangan tilni tiklash
+    }
+  }, [i18n]);
+
   window.addEventListener("scroll", function () {
     if (window.scrollY > 0) {
       fixed[0].classList.add("fixed__active");
@@ -37,6 +48,15 @@ const Navbar = () => {
     }
   }, [isDark]);
 
+  const handledark = () => {
+    setIsDark(!isDark);
+  };
+
+  const changeLang = (lang) => {
+    i18n.changeLanguage(lang);
+    localStorage.setItem("language", lang); // Tanlangan tilni localStorage ga saqlash
+  };
+
   return (
     <div className="navbar">
       <div className="topnav">
@@ -53,7 +73,7 @@ const Navbar = () => {
                   }}
                   href="https://telegram.com"
                 >
-                  Telegram
+                  {t("telegram")}
                 </a>
               </button>
               <button className="button-85" role="button">
@@ -67,7 +87,7 @@ const Navbar = () => {
                   href={file}
                   download
                 >
-                  Presentation (35 mb)
+                  {t("presentation")} (35 MB)
                 </a>
               </button>
               <button className="button-85" role="button">
@@ -79,12 +99,19 @@ const Navbar = () => {
                   }}
                   href="/#contact"
                 >
-                  Submit your application
+                  {t("submitApplication")}
                 </a>
               </button>
             </div>
           </div>
-          <select className="topnav__lang">
+          {/* Tilni o‘zgartirish dropdown */}
+          <select
+            className="topnav__lang"
+            value={i18n.language}
+            onChange={(e) => {
+              changeLang(e.target.value);
+            }}
+          >
             <option value="uz">UZ</option>
             <option value="en">EN</option>
             <option value="ru">RU</option>
@@ -97,91 +124,93 @@ const Navbar = () => {
             <ul className="fixed__ul">
               <li className="fixed__list">
                 <NavLink className="fixed__link" to="/">
-                  Home
+                  {t("home")}
                 </NavLink>
               </li>
-              <li class="fixed__list dropdown1">
+              <li className="fixed__list dropdown1">
                 <p className="fixed__link">
-                  Our services <img className="arrows" src={down} alt="" />
+                  {t("ourServices")}{" "}
+                  <img className="arrows" src={down} alt="" />
                 </p>
-                <div class="dropdown-content1">
+                <div className="dropdown-content1">
                   <p className="fixed__link dropdown2">
-                    Services <img className="arrows" src={right} alt="" />
-                    <div class="dropdown-content2">
+                    {t("services")}{" "}
+                    <img className="arrows" src={right} alt="" />
+                    <div className="dropdown-content2">
                       <p className="fixed__link dropdown3">
-                        Options
+                        {t("options")}
                         <img className="arrows" src={right} alt="" />
-                        <div class="dropdown-content3">
+                        <div className="dropdown-content3">
                           <NavLink to={"/services"} className={"fixed__link"}>
-                            Advertising inside the salon
+                            {t("advertisingInsideSalon")}
                           </NavLink>
                           <hr />
 
                           <NavLink to={"/services"} className={"fixed__link"}>
-                            Advertising outside the bus
+                            {t("advertisingOutsideBus")}
                           </NavLink>
                           <hr />
 
                           <NavLink to={"/services"} className={"fixed__link"}>
-                            Ochiq ma’lumotlar
+                            {t("openData")}
                           </NavLink>
                         </div>
                       </p>
                       <hr />
 
                       <NavLink to={"/services"} className={"fixed__link"}>
-                        In the tunnels
+                        {t("inTunnels")}
                       </NavLink>
                       <hr />
 
                       <NavLink to={"/services"} className={"fixed__link"}>
-                        Outside the subway
+                        {t("outsideSubway")}
                       </NavLink>
                       <hr />
 
                       <NavLink to={"/services"} className={"fixed__link"}>
-                        Inside the subway
+                        {t("insideSubway")}
                       </NavLink>
                       <hr />
                     </div>
                   </p>
                   <hr />
                   <NavLink to={"/services"} className={"fixed__link"}>
-                    On the way
+                    {t("onTheWay")}
                   </NavLink>
                   <hr />
                   <NavLink to={"/services"} className={"fixed__link"}>
-                    On the bridges
+                    {t("onTheBridges")}
                   </NavLink>
                   <hr />
                   <NavLink to={"/services"} className={"fixed__link"}>
-                    Led screen
+                    {t("ledScreen")}
                   </NavLink>
                   <hr />
                   <p className="fixed__link dropdown4">
-                    Advertising on the highway{" "}
+                    {t("advertisingOnHighway")}{" "}
                     <img className="arrows" src={right} alt="" />
-                    <div class="dropdown-content4">
+                    <div className="dropdown-content4">
                       <NavLink to={"/services"} className={"fixed__link"}>
-                        Advertising in copiers
+                        {t("advertisingInCopiers")}
                       </NavLink>
                       <hr />
 
                       <NavLink to={"/services"} className={"fixed__link"}>
-                        Advertising in the stall
+                        {t("advertisingInStall")}
                       </NavLink>
                       <hr />
 
                       <NavLink to={"/services"} className={"fixed__link"}>
-                        advertising on the pass
+                        {t("advertisingOnPass")}
                       </NavLink>
                       <hr />
                       <p className="fixed__link dropdown5">
-                        telvediniya
+                        {t("television")}{" "}
                         <img className="arrows" src={right} alt="" />
-                        <div class="dropdown-content5">
+                        <div className="dropdown-content5">
                           <NavLink to={"/services"} className={"fixed__link"}>
-                            telekanallar
+                            {t("tvChannels")}
                           </NavLink>
                         </div>
                       </p>
@@ -191,22 +220,22 @@ const Navbar = () => {
               </li>
               <li className="fixed__list">
                 <NavLink className="fixed__link" to="/about">
-                  About Us
+                  {t("aboutUs")}
                 </NavLink>
               </li>
               <li className="fixed__list">
                 <a className="fixed__link" href="/#contact">
-                  Contact
+                  {t("contact")}
                 </a>
               </li>
               <li className="fixed__list">
                 <NavLink className="fixed__link" to="/jobs">
-                  Vacancies
+                  {t("vacancies")}
                 </NavLink>
               </li>
               <li className="fixed__list">
                 <a className="fixed__link" href="/#reviews">
-                  Reviews
+                  {t("reviews")}
                 </a>
               </li>
             </ul>
@@ -214,9 +243,9 @@ const Navbar = () => {
               <img className="fixed__searchicon" src={search} alt="" />
               <ReactTyped
                 strings={[
-                  "Advertisement on billboards",
-                  "Advertisement on buses",
-                  "Advertisement on LED screens",
+                  t("advertisementOnBillboards"),
+                  t("advertisementOnBuses"),
+                  t("advertisementOnLEDscreens"),
                 ]}
                 typeSpeed={40}
                 backSpeed={50}
@@ -241,12 +270,19 @@ const Navbar = () => {
               </div>
             </div>
             <div className="fixed__btns">
-              <Toggle
-                checked={isDark}
-                onChange={({ target }) => setIsDark(target.checked)}
-                icons={{ checked: "🌙", unchecked: "🔆" }}
-                aria-label="Dark mode toggle"
-              />
+              <div className="dark_mode">
+                <input
+                  className="dark_mode_input"
+                  type="checkbox"
+                  id="darkmode-toggle"
+                  checked={isDark}
+                  onChange={handledark}
+                />
+                <label className="dark_mode_label" htmlFor="darkmode-toggle">
+                  <img src={sun} alt="" className="sun" />
+                  <img src={moon} alt="" className="moon" />
+                </label>
+              </div>
               <button className="fixed__btn" role="button">
                 <img className="fixed__logos" src={heart} alt="" />
               </button>

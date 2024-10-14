@@ -5,10 +5,13 @@ import { Autoplay, EffectCube } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-cube";
 import { NavLink } from "react-router-dom";
-import banner from "../../../../public/banner.jpeg";
-import hog from "../../../../public/hog.jpeg";
+import banner from "../../../../public/img/banner.jpeg";
+import hog from "../../../../public/img/hog.jpeg";
+import { useTranslation } from "react-i18next";
 
 const Intro = () => {
+  const { t } = useTranslation(); // useTranslation qo'shildi
+
   return (
     <div className="intro">
       <div className="intro__wrapper">
@@ -23,27 +26,22 @@ const Intro = () => {
             modules={[Autoplay]}
             className="mySwiper"
           >
-            <SwiperSlide>Full cycle advertising agency</SwiperSlide>
-            <SwiperSlide>Join Inout Advertising Agency</SwiperSlide>
+            <SwiperSlide>{t("fullCycleAdAgency")}</SwiperSlide>{" "}
+            {/* Tarjima qo'shildi */}
+            <SwiperSlide>{t("joinAdvertisingAgency")}</SwiperSlide>{" "}
+            {/* Tarjima qo'shildi */}
           </Swiper>
-          <button class="btn-13">
-            <NavLink
-              class="cta"
+          <button className="btn-13" style={{ fontSize: "15px" }}>
+            <a
+              className="cta"
               style={{ textDecoration: "none", color: "#fff" }}
-              to={"/#contact"}
+              href="/#contact"
             >
-              Get consult
-            </NavLink>
+              {t("getConsult")} {/* Tarjima qo'shildi */}
+            </a>
           </button>
         </div>
         <Swiper
-          // effect={"cube"}
-          // cubeEffect={{
-          //   shadow: true,
-          //   slideShadows: true,
-          //   shadowOffset: 20,
-          //   shadowScale: 0.94,
-          // }}
           autoplay={{
             delay: 2000,
             disableOnInteraction: false,

@@ -1,25 +1,28 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import "./Aboutus.scss";
-import logo from "../../../../public/kirdichiqdi.png";
+import logo from "../../../../public/img/kirdichiqdi.png";
 import { NavLink } from "react-router-dom";
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
 
 const Aboutus = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="aboutus">
       <div className="aboutus__wrapper">
         <img src={logo} alt="" className="aboutus__img" />
         <div className="aboutus__right">
           <div className="aboutus__desc">
-            <h1 className="aboutus__title">About Us</h1>
-            <button class="aboutus__btn btn-13">
+            <h1 className="aboutus__title">{t("about_us_title")}</h1>
+            <button className="aboutus__btn btn-13">
               <NavLink
-                class="cta"
+                className="cta"
                 style={{ textDecoration: "none", color: "#fff" }}
                 to={"/about"}
               >
-                Learn more
+                {t("learn_more_button")}
               </NavLink>
             </button>
           </div>
@@ -33,7 +36,7 @@ const Aboutus = () => {
                 )}
               </CountUp>
               <span className="countb">+</span>
-              <p className="about__statext">Successful teamwork</p>
+              <p className="about__statext">{t("successful_teamwork")}</p>
             </div>
             <div className="about__stats">
               <CountUp end={24} redraw={true}>
@@ -43,7 +46,7 @@ const Aboutus = () => {
                   </VisibilitySensor>
                 )}
               </CountUp>
-              <p className="about__statext">Work in our company</p>
+              <p className="about__statext">{t("work_in_company")}</p>
             </div>
             <div className="about__stats">
               <CountUp end={138} redraw={true}>
@@ -53,7 +56,7 @@ const Aboutus = () => {
                   </VisibilitySensor>
                 )}
               </CountUp>
-              <p className="about__statext">Promoted on social media</p>
+              <p className="about__statext">{t("promoted_on_social_media")}</p>
             </div>
             <div className="about__stats">
               <CountUp end={336} redraw={true}>
@@ -63,7 +66,7 @@ const Aboutus = () => {
                   </VisibilitySensor>
                 )}
               </CountUp>
-              <p className="about__statext">Developed and launched</p>
+              <p className="about__statext">{t("developed_and_launched")}</p>
             </div>
             <div className="about__stats">
               <CountUp end={53} redraw={true}>
@@ -73,7 +76,7 @@ const Aboutus = () => {
                   </VisibilitySensor>
                 )}
               </CountUp>
-              <p className="about__statext">Promoted on social networks</p>
+              <p className="about__statext">{t("promoted_on_networks")}</p>
             </div>
             <div className="about__stats">
               <CountUp end={218} redraw={true}>
@@ -83,7 +86,7 @@ const Aboutus = () => {
                   </VisibilitySensor>
                 )}
               </CountUp>
-              <p className="about__statext">products in grafana</p>
+              <p className="about__statext">{t("products_in_grafana")}</p>
             </div>
           </div>
         </div>

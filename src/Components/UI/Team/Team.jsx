@@ -1,43 +1,44 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import "./Team.scss";
 import { NavLink } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css/navigation";
-import ins from "../../../../public/ins.jpeg";
-import tg from "../../../../public/telegram.png";
-import phone from "../../../../public/phoneb.png";
-import team1 from "../../../../public/team1.jpeg";
-import team2 from "../../../../public/team2.jpeg";
-import team3 from "../../../../public/team3.png";
-import team4 from "../../../../public/team4.png";
-import team5 from "../../../../public/team5.png";
-import team6 from "../../../../public/team6.jpeg";
+import ins from "../../../../public/img/ins.jpeg";
+import tg from "../../../../public/img/telegram.png";
+import phone from "../../../../public/img/phoneb.png";
+import team1 from "../../../../public/img/team1.jpeg";
+import team2 from "../../../../public/img/team2.jpeg";
+import team3 from "../../../../public/img/team3.png";
+import team4 from "../../../../public/img/team4.png";
+import team5 from "../../../../public/img/team5.png";
+import team6 from "../../../../public/img/team6.jpeg";
 import VisibilitySensor from "react-visibility-sensor";
 import CountUp from "react-countup";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 
 const Team = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="team">
       <div className="team__wrapper">
         <div className="team__top">
           <div className="team__desc">
-            <h2 className="team__title">Our team</h2>
-            <p className="team__text">
-              It is this team that makes your order quality , reliable, and safe
-            </p>
+            <h2 className="team__title">{t("title")}</h2>
+            <p className="team__text">{t("description")}</p>
           </div>
           <button className="team__btn btn-13">
-            <NavLink
+            <a
               className="cta"
               style={{ textDecoration: "none", color: "#fff" }}
-              to={"/team"}
+              href="/#contact"
             >
-              See the full list
-            </NavLink>
+              {t("contact")}
+            </a>
           </button>
         </div>
         <Swiper
@@ -74,8 +75,8 @@ const Team = () => {
               <img src={team1} alt="" className="team__img" />
             </Zoom>
             <div className="team__carddesc">
-              <h4 className="team__subtitle">Feruza</h4>
-              <p className="team__text">Head of sales department</p>
+              <h4 className="team__subtitle">{t("member1_name")}</h4>
+              <p className="team__text">{t("member1_role")}</p>
             </div>
             <div className="team__icons">
               <NavLink
@@ -100,13 +101,13 @@ const Team = () => {
                 <img src={phone} alt="" className="team__icon" />
               </NavLink>
             </div>
-            <button class="team__btn btn-13">
+            <button className="team__btn btn-13">
               <a
-                class="cta"
+                className="cta"
                 style={{ textDecoration: "none", color: "#fff" }}
                 href={"#contact"}
               >
-                Estimate
+                {t("estimate")}
               </a>
             </button>
           </SwiperSlide>
@@ -115,8 +116,8 @@ const Team = () => {
               <img src={team2} alt="" className="team__img" />
             </Zoom>
             <div className="team__carddesc">
-              <h4 className="team__subtitle">Alisa</h4>
-              <p className="team__text">Designer</p>
+              <h4 className="team__subtitle">{t("member2_name")}</h4>
+              <p className="team__text">{t("member2_role")}</p>
             </div>
             <div className="team__icons">
               <NavLink
@@ -141,13 +142,13 @@ const Team = () => {
                 <img src={phone} alt="" className="team__icon" />
               </NavLink>
             </div>
-            <button class="team__btn btn-13">
+            <button className="team__btn btn-13">
               <a
-                class="cta"
+                className="cta"
                 style={{ textDecoration: "none", color: "#fff" }}
                 href={"#contact"}
               >
-                Estimate
+                {t("estimate")}
               </a>
             </button>
           </SwiperSlide>
@@ -156,8 +157,8 @@ const Team = () => {
               <img src={team3} alt="" className="team__img" />
             </Zoom>
             <div className="team__carddesc">
-              <h4 className="team__subtitle">Mira</h4>
-              <p className="team__text">Android Developer</p>
+              <h4 className="team__subtitle">{t("member3_name")}</h4>
+              <p className="team__text">{t("member3_role")}</p>
             </div>
             <div className="team__icons">
               <NavLink
@@ -182,13 +183,13 @@ const Team = () => {
                 <img src={phone} alt="" className="team__icon" />
               </NavLink>
             </div>
-            <button class="team__btn btn-13">
+            <button className="team__btn btn-13">
               <a
-                class="cta"
+                className="cta"
                 style={{ textDecoration: "none", color: "#fff" }}
                 href={"#contact"}
               >
-                Estimate
+                {t("estimate")}
               </a>
             </button>
           </SwiperSlide>
@@ -197,8 +198,8 @@ const Team = () => {
               <img src={team4} alt="" className="team__img" />
             </Zoom>
             <div className="team__carddesc">
-              <h4 className="team__subtitle">Lisa</h4>
-              <p className="team__text">Secretar</p>
+              <h4 className="team__subtitle">{t("member4_name")}</h4>
+              <p className="team__text">{t("member4_role")}</p>
             </div>
             <div className="team__icons">
               <NavLink
@@ -223,13 +224,13 @@ const Team = () => {
                 <img src={phone} alt="" className="team__icon" />
               </NavLink>
             </div>
-            <button class="team__btn btn-13">
+            <button className="team__btn btn-13">
               <a
-                class="cta"
+                className="cta"
                 style={{ textDecoration: "none", color: "#fff" }}
                 href={"#contact"}
               >
-                Estimate
+                {t("estimate")}
               </a>
             </button>
           </SwiperSlide>
@@ -238,8 +239,8 @@ const Team = () => {
               <img src={team5} alt="" className="team__img" />
             </Zoom>
             <div className="team__carddesc">
-              <h4 className="team__subtitle">Pem</h4>
-              <p className="team__text">Product Manager</p>
+              <h4 className="team__subtitle">{t("member5_name")}</h4>
+              <p className="team__text">{t("member5_role")}</p>
             </div>
             <div className="team__icons">
               <NavLink
@@ -264,13 +265,13 @@ const Team = () => {
                 <img src={phone} alt="" className="team__icon" />
               </NavLink>
             </div>
-            <button class="team__btn btn-13">
+            <button className="team__btn btn-13">
               <a
-                class="cta"
+                className="cta"
                 style={{ textDecoration: "none", color: "#fff" }}
                 href={"#contact"}
               >
-                Estimate
+                {t("estimate")}
               </a>
             </button>
           </SwiperSlide>
@@ -279,8 +280,8 @@ const Team = () => {
               <img src={team6} alt="" className="team__img" />
             </Zoom>
             <div className="team__carddesc">
-              <h4 className="team__subtitle">Nasha</h4>
-              <p className="team__text">Bloger</p>
+              <h4 className="team__subtitle">{t("member6_name")}</h4>
+              <p className="team__text">{t("member6_role")}</p>
             </div>
             <div className="team__icons">
               <NavLink
@@ -305,19 +306,19 @@ const Team = () => {
                 <img src={phone} alt="" className="team__icon" />
               </NavLink>
             </div>
-            <button class="team__btn btn-13">
+            <button className="team__btn btn-13">
               <a
-                class="cta"
+                className="cta"
                 style={{ textDecoration: "none", color: "#fff" }}
                 href={"#contact"}
               >
-                Estimate
+                {t("estimate")}
               </a>
             </button>
           </SwiperSlide>
         </Swiper>
         <div className="team__num">
-          <h1 className="team__title">We're in Numbers</h1>
+          <h1 className="team__title">{t("we_are_in_numbers")}</h1>
           <div className="team__static">
             <div className="team__stats">
               <CountUp end={20} redraw={true}>
@@ -328,7 +329,7 @@ const Team = () => {
                 )}
               </CountUp>
               <span className="countb">+</span>
-              <p className="about__statext">The number of employees</p>
+              <p className="about__statext">{t("employees")}</p>
             </div>
             <div className="team__stats">
               <CountUp end={1672} redraw={true}>
@@ -339,7 +340,7 @@ const Team = () => {
                 )}
               </CountUp>
               <span className="countb">+</span>
-              <p className="about__statext">launched advertising campaigns</p>
+              <p className="about__statext">{t("campaigns_launched")}</p>
             </div>
             <div className="team__stats">
               <CountUp end={1660} redraw={true}>
@@ -350,7 +351,7 @@ const Team = () => {
                 )}
               </CountUp>
               <span className="countb">+</span>
-              <p className="about__statext">successful cases</p>
+              <p className="about__statext">{t("successful_cases")}</p>
             </div>
           </div>
         </div>
