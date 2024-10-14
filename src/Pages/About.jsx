@@ -1,5 +1,4 @@
 import React from "react";
-import left from "../../public/left.png";
 import leftb from "../../public/leftb.png";
 import logo from "../../public/kirdichiqdi.png";
 import { NavLink } from "react-router-dom";

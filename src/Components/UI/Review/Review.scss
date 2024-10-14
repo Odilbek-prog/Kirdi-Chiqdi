@@ -1,0 +1,56 @@
+.review {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  &__wrapper {
+    width: 1100px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  &__desc {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__btn {
+    font-size: 13px;
+    width: 180px;
+  }
+  &__card {
+    width: 450px !important;
+    height: 170px !important;
+    background: #fff;
+    border-radius: 15px;
+    color: black;
+    padding: 15px;
+    display: flex;
+    font-size: 15px;
+    p {
+      font-weight: 400;
+      font-size: 12px;
+    }
+  }
+  &__desc {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__carddesc {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  &__img {
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50%;
+  }
+  &__stars {
+    display: flex;
+    gap: 5px;
+  }
+  &__star {
+    width: 30px !important;
+    height: 30px !important;
+  }
+}

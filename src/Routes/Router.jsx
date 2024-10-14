@@ -4,6 +4,7 @@ import Home from "../Pages/Home";
 import About from "../Pages/About";
 import Jobs from "../Pages/Jobs";
 import Services from "../Pages/Services";
+import Allvideos from "../Pages/Allvideos";
 
 const Router = () => {
   return (
@@ -12,6 +13,7 @@ const Router = () => {
       <Route path="/about" element={<About />} />
       <Route path="/jobs" element={<Jobs />} />
       <Route path="/services" element={<Services />} />
+      <Route path="/allvideos" element={<Allvideos />} />
     </Routes>
   );
 };

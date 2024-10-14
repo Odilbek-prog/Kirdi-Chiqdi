@@ -30,7 +30,7 @@ const Intro = () => {
             <NavLink
               class="cta"
               style={{ textDecoration: "none", color: "#fff" }}
-              to={"#contact"}
+              to={"/#contact"}
             >
               Get consult
             </NavLink>

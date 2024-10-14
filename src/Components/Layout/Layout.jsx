@@ -5,7 +5,7 @@ import Footer from "../Footer/Footer";
 
 const Layout = () => {
   return (
-    <div className="container">
+    <div className="container" id="con">
       <Navbar />
       <div className="main">
         <Router />

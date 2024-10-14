@@ -1,5 +1,12 @@
 import React from "react";
 import "./Location.scss";
+import inb from "../../../../public/inb.png";
+import iny from "../../../../public/iny.png";
+import inp from "../../../../public/inp.png";
+import inr from "../../../../public/inr.png";
+import ingray from "../../../../public/ingray.png";
+import inw from "../../../../public/inw.png";
+import ing from "../../../../public/ing.png";
 
 const Location = () => {
   return (
@@ -14,17 +21,50 @@ const Location = () => {
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
         <div className="location__btns">
-          <button className="location__btn"></button>
-          <button className="location__btn"></button>
-          <button className="location__btn"></button>
-          <button className="location__btn"></button>
-          <button className="location__btn"></button>
-          <button className="location__btn"></button>
-          <button className="location__btn"></button>
-          <button className="location__btn"></button>
-          <button className="location__btn"></button>
-          <button className="location__btn"></button>
-          <button className="location__btn"></button>
+          <button className="location__btn">
+            <img src={ing} alt="" className="location__icon" />
+            <h3 className="location__text">All posters</h3>
+          </button>
+          <button className="location__btn">
+            <img src={inb} alt="" className="location__icon" />
+            <h3 className="location__text">Free</h3>
+          </button>
+          <button className="location__btn">
+            <img src={inr} alt="" className="location__icon" />
+            <h3 className="location__text">Busy until</h3>
+          </button>
+          <button className="location__btn">
+            <img src={inb} alt="" className="location__icon" />
+            <h3 className="location__text">By regions</h3>
+          </button>
+          <button className="location__btn">
+            <img src={inb} alt="" className="location__icon" />
+            <h3 className="location__text">Flagpoles</h3>
+          </button>
+          <button className="location__btn">
+            <img src={iny} alt="" className="location__icon" />
+            <h3 className="location__text">Billboards</h3>
+          </button>
+          <button className="location__btn">
+            <img src={inp} alt="" className="location__icon" />
+            <h3 className="location__text">Banner stand</h3>
+          </button>
+          <button className="location__btn">
+            <img src={inr} alt="" className="location__icon" />
+            <h3 className="location__text">Prismatrons</h3>
+          </button>
+          <button className="location__btn">
+            <img src={ingray} alt="" className="location__icon" />
+            <h3 className="location__text">Firewall</h3>
+          </button>
+          <button className="location__btn">
+            <img src={inw} alt="" className="location__icon" />
+            <h3 className="location__text">Cityformats</h3>
+          </button>
+          <button className="location__btn">
+            <img src={ing} alt="" className="location__icon" />
+            <h3 className="location__text">LED monitor</h3>
+          </button>
         </div>
       </div>
     </div>

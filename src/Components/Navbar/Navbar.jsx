@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./Navbar.scss";
 import logo from "../../../public/kirdichiqdi.png";
 import tg from "../../../public/telegram.png";
@@ -14,16 +14,11 @@ import heart from "../../../public/heart.png";
 import { NavLink } from "react-router-dom";
 import { ReactTyped } from "react-typed";
 import file from "../../assets/file.pdf";
+import Toggle from "react-toggle";
 
 const fixed = document.getElementsByClassName("fixed");
 
 const Navbar = () => {
-  // let dark = localStorage.getItem("dark");
-
-  // useEffect(() => {
-  //   dark = localStorage.getItem(dark);
-  // }, [localStorage.getItem(dark)]);
-
   window.addEventListener("scroll", function () {
     if (window.scrollY > 0) {
       fixed[0].classList.add("fixed__active");
@@ -32,15 +27,15 @@ const Navbar = () => {
     }
   });
 
-  // const handleDark = () => {
-  //   if (dark === true) {
-  //     localStorage.setItem("dark", false);
-  //     dark = false;
-  //   } else {
-  //     localStorage.setItem("dark", true);
-  //     dark = true;
-  //   }
-  // };
+  const [isDark, setIsDark] = useState(false);
+  useEffect(() => {
+    const con = document.getElementById("con");
+    if (isDark) {
+      con.classList.add("darkmode");
+    } else {
+      con.classList.remove("darkmode");
+    }
+  }, [isDark]);
 
   return (
     <div className="navbar">
@@ -51,7 +46,15 @@ const Navbar = () => {
             <div className="topnav__desc">
               <button className="button-85" role="button">
                 <img className="logos" src={tg} alt="" />
-                Telegram
+                <a
+                  style={{
+                    color: "#fff",
+                    textDecoration: "none",
+                  }}
+                  href="https://telegram.com"
+                >
+                  Telegram
+                </a>
               </button>
               <button className="button-85" role="button">
                 <img className="logos" src={download} alt="" />
@@ -69,7 +72,15 @@ const Navbar = () => {
               </button>
               <button className="button-85" role="button">
                 <img className="logos" src={chat} alt="" />
-                Submit your application
+                <a
+                  style={{
+                    color: "#fff",
+                    textDecoration: "none",
+                  }}
+                  href="/#contact"
+                >
+                  Submit your application
+                </a>
               </button>
             </div>
           </div>
@@ -184,9 +195,9 @@ const Navbar = () => {
                 </NavLink>
               </li>
               <li className="fixed__list">
-                <NavLink className="fixed__link" to="/#contact">
+                <a className="fixed__link" href="/#contact">
                   Contact
-                </NavLink>
+                </a>
               </li>
               <li className="fixed__list">
                 <NavLink className="fixed__link" to="/jobs">
@@ -194,9 +205,9 @@ const Navbar = () => {
                 </NavLink>
               </li>
               <li className="fixed__list">
-                <NavLink className="fixed__link" to="/#reviews">
+                <a className="fixed__link" href="/#reviews">
                   Reviews
-                </NavLink>
+                </a>
               </li>
             </ul>
             <form className="fixed__form">
@@ -230,18 +241,11 @@ const Navbar = () => {
               </div>
             </div>
             <div className="fixed__btns">
-              <img src={moon} alt="" />
-              <input
-                style={{
-                  borderRadius: "25px",
-                  border: "none",
-                  animation: "glow 2s linear infinite",
-                  width: "30px",
-                  height: "30px",
-                  cursor: "pointer",
-                }}
-                type="checkbox"
-                // onChange={handleDark}
+              <Toggle
+                checked={isDark}
+                onChange={({ target }) => setIsDark(target.checked)}
+                icons={{ checked: "🌙", unchecked: "🔆" }}
+                aria-label="Dark mode toggle"
               />
               <button className="fixed__btn" role="button">
                 <img className="fixed__logos" src={heart} alt="" />
