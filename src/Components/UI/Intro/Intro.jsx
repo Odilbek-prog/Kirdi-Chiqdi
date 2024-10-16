@@ -5,8 +5,8 @@ import { Autoplay, EffectCube } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-cube";
 import { NavLink } from "react-router-dom";
-import banner from "../../../../public/img/banner.jpeg";
-import hog from "../../../../public/img/hog.jpeg";
+import banner from "../../../assets/banner.jpeg";
+import hog from "../../../assets/hog.jpeg";
 import { useTranslation } from "react-i18next";
 
 const Intro = () => {

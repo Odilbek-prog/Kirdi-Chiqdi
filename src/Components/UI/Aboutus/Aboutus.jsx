@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import "./Aboutus.scss";
-import logo from "../../../../public/img/kirdichiqdi.png";
+import logo from "../../../assets/kirdichiqdi.png";
 import { NavLink } from "react-router-dom";
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";

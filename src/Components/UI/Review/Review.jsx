@@ -4,11 +4,11 @@ import "./Review.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
-import team1 from "../../../../public/img/team1.jpeg";
-import team2 from "../../../../public/img/team2.jpeg";
-import team5 from "../../../../public/img/team5.png";
-import blues from "../../../../public/img/bluestar.png";
-import grays from "../../../../public/img/graystar.png";
+import team1 from "../../../assets/team1.jpeg";
+import team2 from "../../../assets/team2.jpeg";
+import team5 from "../../../assets/team5.png";
+import blues from "../../../assets/bluestar.png";
+import grays from "../../../assets/graystar.png";
 
 const Review = () => {
   const { t } = useTranslation();

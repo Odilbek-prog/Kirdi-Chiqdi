@@ -1,12 +1,12 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import bus from "../../public/img/bus.jpeg";
-import cat from "../../public/img/cat.png";
-import uchd from "../../public/img/3d.jpeg";
-import nike from "../../public/img/nike.jpeg";
-import dia from "../../public/img/dia.jpeg";
-import isrof from "../../public/img/isrof.jpeg";
-import banner3 from "../../public/img/banner2.png";
+import bus from "../assets/bus.jpeg";
+import cat from "../assets/cat.png";
+import uchd from "../assets/3d.jpeg";
+import nike from "../assets/nike.jpeg";
+import dia from "../assets/dia.jpeg";
+import isrof from "../assets/isrof.jpeg";
+import banner3 from "../assets/banner2.png";
 import { useTranslation } from "react-i18next";
 
 const Services = () => {

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import "./Contact.scss";
-import Contactimg from "../../../../public/img/contactimg.png";
+import Contactimg from "../../../assets/contactimg.png";
 import axios from "axios";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";

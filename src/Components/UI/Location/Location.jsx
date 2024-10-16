@@ -1,12 +1,12 @@
 import React from "react";
 import "./Location.scss";
-import inb from "../../../../public/img/inb.png";
-import iny from "../../../../public/img/iny.png";
-import inp from "../../../../public/img/inp.png";
-import inr from "../../../../public/img/inr.png";
-import ingray from "../../../../public/img/ingray.png";
-import inw from "../../../../public/img/inw.png";
-import ing from "../../../../public/img/ing.png";
+import inb from "../../../assets/inb.png";
+import iny from "../../../assets/iny.png";
+import inp from "../../../assets/inp.png";
+import inr from "../../../assets/inr.png";
+import ingray from "../../../assets/ingray.png";
+import inw from "../../../assets/inw.png";
+import ing from "../../../assets/ing.png";
 import { useTranslation } from "react-i18next"; // useTranslation qo'shildi
 
 const Location = () => {

@@ -1,5 +1,5 @@
 import React from "react";
-import check from "../../public/img/check.svg";
+import check from "../assets/check.svg";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 

@@ -1,13 +1,13 @@
 import React from "react";
-import leftb from "../../public/img/leftb.png";
-import logo from "../../public/img/kirdichiqdi.png";
+import leftb from "../assets/leftb.png";
+import logo from "../assets/kirdichiqdi.png";
 import { NavLink } from "react-router-dom";
 import CountUp from "react-countup";
-import tg from "../../public/img/telegram.png";
-import what from "../../public/img/whatsapp.png";
-import face from "../../public/img/face.png";
-import inst from "../../public/img/ins.jpeg";
-import yt from "../../public/img/yt.webp";
+import tg from "../assets/telegram.png";
+import what from "../assets/whatsapp.png";
+import face from "../assets/face.png";
+import inst from "../assets/ins.jpeg";
+import yt from "../assets/yt.webp";
 import VisibilitySensor from "react-visibility-sensor";
 import { useTranslation } from "react-i18next";
 
