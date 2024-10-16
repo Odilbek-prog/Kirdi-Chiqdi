@@ -1,9 +1,9 @@
 import React from "react";
 import "./Footer.scss";
-import logo from "../../../public/img/kirdichiqdi.png";
-import calendar from "../../../public/img/calendar.png";
-import map from "../../../public/img/map.png";
-import creative from "../../../public/img/creative.png";
+import logo from "../../assets/kirdichiqdi.png";
+import calendar from "../../assets/calendar.png";
+import map from "../../assets/map.png";
+import creative from "../../assets/creative.png";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
