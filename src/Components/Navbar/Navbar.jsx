@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import "./Navbar.scss";
-import logo from "../../../public/img/kirdichiqdi.png";
-import tg from "../../../public/img/telegram.png";
-import download from "../../../public/img/download.png";
-import chat from "../../../public/img/chat.png";
-import down from "../../../public/img/down.png";
-import right from "../../../public/img/right.png";
-import search from "../../../public/img/search.png";
-import clock from "../../../public/img/clock.png";
-import phone from "../../../public/img/phone.png";
-import heart from "../../../public/img/heart.png";
+import logo from "../../assets/kirdichiqdi.png";
+import tg from "../../assets/telegram.png";
+import download from "../../assets/download.png";
+import chat from "../../assets/chat.png";
+import down from "../../assets/down.png";
+import right from "../../assets/right.png";
+import search from "../../assets/search.png";
+import clock from "../../assets/clock.png";
+import phone from "../../assets/phone.png";
+import heart from "../../assets/heart.png";
 import { NavLink } from "react-router-dom";
 import { ReactTyped } from "react-typed";
 import file from "../../assets/file.pdf";
-import sun from "../../../public/img/Sun.svg";
-import moon from "../../../public/img/Moon.svg";
+import sun from "../../assets/Sun.svg";
+import moon from "../../assets/Moon.svg";
 
 const fixed = document.getElementsByClassName("fixed");
 
